@@ -15,15 +15,14 @@ const theHobbit = new book("The Hobbit", "J.R.R Tolkien", "451","yes");
 
 // prototypes
 
-function Student(){
-   /*  this.sayName = function(){ (this does not work? )
-        console.log(this.name)
-    } */
+class Student {
+  constructor() {
+  }
+  sayName() {
+    console.log(this.name);
+  }
 }
 
-Student.prototype.sayName = function(){
-    console.log(this.name)
-}
 
 function EighthGrader(name) {
     this.name = name

@@ -2,25 +2,20 @@
 /*jshint esversion: 6 */
 
 import _ from 'lodash';
-import './style.css';
-import Icon from './icon.jpg';
-import Data from './data.xml';
-import Notes from './data.csv';
+import printMe from './print.js';
+
 
 function component(){
     const element = document.createElement('div');
-    //lodash is now imported by this script 
+    const btn = document.createElement('button');
+
+
     element.innerHTML = _.join(['Hello', 'webpack'],' ');
-    element.classList.add('hello');
-    
-    const myIcon = new Image();
-    myIcon.src = Icon;
-  
-    element.appendChild(myIcon);
+   
+    btn.innerHTML = 'Click me and check the console!!';
+    btn.onclick = printMe;
 
-    console.log(Data);
-    console.log(Notes);
-
+    element.appendChild(btn);
 
     return element;
 }
